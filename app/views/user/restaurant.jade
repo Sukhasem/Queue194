@@ -1,0 +1,16 @@
+html
+  head
+    title=title
+    link(href='/css/main.css', rel='stylesheet')
+  body
+    h3 Hello, User: #{username}
+    div
+      p #{restaurant.name}
+      p #{restaurant.description}
+      p blar blar blar blar blar blar blar blar blar blar blar blar 
+      a(href='/restaurant/reserving/' + restaurant.name) Reserve
+    div
+      br
+      a(href='/') Back
+      form(name='logout', method='post', action='/logout')
+        input(type='submit', value='Log out')

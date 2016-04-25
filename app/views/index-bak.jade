@@ -1,0 +1,19 @@
+html
+  head
+    title=title
+    link(href='/css/main.css', rel='stylesheet')
+  body
+    if username
+      h2 Hello #{username}
+      div
+        p # Name      Queue
+        p 1 GoodView    0
+        p 2 Riverside   0
+      div
+        form(name='logout', method='post', action='/logout')
+          input(type='submit', value='Log out')
+    else
+      div
+        a(href='/signup') Sign up
+      div
+        a(href='/login') Log in

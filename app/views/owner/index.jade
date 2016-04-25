@@ -1,0 +1,18 @@
+html
+  head
+    title=title
+    link(href='/css/main.css', rel='stylesheet')
+  body
+    h2 Hello, Owner: #{username}
+    div
+      h3 Your Restaurant
+      | Goodview
+      br
+      a(href='/ownrestaurant/edit') Edit
+      br
+      a(href='/ownrestaurant/manageq') Manage Queue
+      br
+      br
+    div
+      form(name='logout', method='post', action='/logout')
+        input(type='submit', value='Log out')

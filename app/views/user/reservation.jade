@@ -1,0 +1,22 @@
+html
+  head
+    title=title
+    link(href='/css/main.css', rel='stylesheet')
+  body
+    div
+      h2 Reservation
+      a(href='/') Back
+    div
+      h3 List of your reserved.
+      if reservations
+        div
+
+            | #{restaurant.name} (#{restaurant.description})
+            br
+            | Seat: #{reservations.seat}
+            | Time: #{reservations.time}
+            br
+            a(href='/reservation/cancel/' + reservations._id)  Cancel
+            br
+      else
+        | No reservation.

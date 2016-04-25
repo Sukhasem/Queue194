@@ -1,0 +1,27 @@
+html
+  head
+    title=title
+    link(href='/css/main.css', rel='stylesheet')
+  body
+    a(href='/') Back
+    each msg in message
+      div.flash
+        = msg
+    form(name='signup', method='POST', action='/signup')
+      div
+        label(for='username') Username
+        input(name='username', type='text', placeholder='Username')
+      div
+        label(for='firstname') Firstname
+        input(name='firstname', type='text', placeholder='Firstname')
+      div
+        label(for='lastname') Lastname
+        input(name='lastname', type='text', placeholder='Lastname')
+      div
+        label(for='email') Email
+        input(name='email', type='email', placeholder='youremail@email.com')
+      div
+        label(for='password') Password
+        input(name='password', type='password', placeholder='Password')
+      div
+        input(type='submit', value='Sign up')
